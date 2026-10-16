@@ -1,6 +1,6 @@
 cask "bar-apple-silicon" do
-  version "0.15.4-alpha.1"
-  sha256 "df42bbc6524efcf7da5a46a349bc27e657308a36daa029392857a4a2e49e61a3"
+  version "0.15.4-alpha.2"
+  sha256 "1dcbfcd49da91cbb70a593cc1f79df0125a1e9b1dbc50acb1ddc3c9438dd3f86"
 
   url "https://github.com/yeojuny/bar-lobby-apple-silicon/releases/download/v#{version}/BAR-#{version}-arm64.dmg"
   name "BAR for Apple Silicon"
