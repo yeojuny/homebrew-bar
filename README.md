@@ -2,7 +2,13 @@
 
 Apple Silicon and macOS27+ are required. This personal tap is independent of upstream BAR and Homebrew’s official cask collection.
 
-## Version 1.0.2 defaults
+## Version 1.0.3 healthbars
+
+Healthbars and tracker load from immutable native sources independently of the full widget-handler hash. Dedicated shader paths avoid collision with the official fallback. Rendering bytes are preserved; other widgets retain their existing strict compatibility route. Future API/atlas incompatibilities may still need maintenance.
+
+The exact app has CPU/package/signature checks and applied self-review only. Actual1.0.3 game/GPU/other-Mac testing is pending, with testing owned by the user. No separate Audit-agent or new FPS/MP acceptance is claimed.
+
+## Version 1.0.2 defaults (retained)
 
 First initialization applies the official Ultra preset, AA Off, Fog Diagonal Lines strength0 and Spring camera. Separate one-time markers preserve later choices. Normal fog of war remains. AA is initialized before native context creation in both routes. The overhead camera implementation, display handling, stack, AI and sync identities are unchanged.
 
@@ -34,6 +40,6 @@ The app is ad-hoc signed without Apple Developer ID signing or notarization. If 
 
 A restart is an optional troubleshooting step, not a guaranteed fix. Report the exact error if launching still fails. Warnings that the app will damage your computer should be investigated rather than bypassed.
 
-[1.0.2 release, sources, notices and detailed validation](https://github.com/yeojuny/bar-lobby-apple-silicon/releases/tag/v1.0.2) · [Repository and local play observations](https://github.com/yeojuny/bar-lobby-apple-silicon)
+[1.0.3 release, sources, notices and detailed validation](https://github.com/yeojuny/bar-lobby-apple-silicon/releases/tag/v1.0.3) · [Repository and local play observations](https://github.com/yeojuny/bar-lobby-apple-silicon)
 
 The cask pins the exact DMG/SHA256 and installs only BAR.app. It contains no automatic-quit, personal-data deletion or quarantine-removal hooks. Publication does not run or install local apps. Metal3 remains default, Metal4 experimental; audio remains OpenAL/CoreAudio.
