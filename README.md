@@ -1,19 +1,33 @@
 # BAR for Apple Silicon — personal Homebrew tap
 
-Install the unsigned experimental Apple Silicon/macOS 27+ release:
+Apple Silicon and macOS27+ are required. This personal tap is independent of upstream BAR and Homebrew’s official cask collection.
+
+## Install or update
 
 ```sh
+brew update
 brew install --cask yeojuny/bar/bar-apple-silicon
 ```
 
-For an existing cask installation, run `brew update` and then `brew upgrade --cask yeojuny/bar/bar-apple-silicon`.
+For an existing cask installation, quit BAR normally, then run:
 
-Candidate.4 publishes the newer Lobby/engine integration, fullscreen/Chobby transition fixes and BARb/CircuitAI loading corrections. Chobby keeps its official 2026.07.04 identity. Different-Mac testing is pending; no new FPS/energy or full multiplayer synchronization claim. Quit BAR normally before updating.
+```sh
+brew update
+brew upgrade --cask yeojuny/bar/bar-apple-silicon
+```
 
-One **BAR.app** contains bar-lobby and **Multiplayer (Chobby)** with shared native graphics libraries. In BAR Settings, choose **Metal3** (default) or **Metal4** (experimental); it applies on the next native launch.
+One BAR.app includes bar-lobby and Multiplayer (Chobby). Game/maps download separately. An installation from another distributor is not automatically adopted or removed.
 
-The cask pins the exact versioned DMG and SHA-256 from the [release](https://github.com/yeojuny/bar-lobby-apple-silicon/releases/tag/v0.17.0-candidate.4). It has no automatic uninstall, data-deletion or quarantine-removal hooks. An existing BAR.app or another distributor's cask can conflict: choose your installation deliberately; do not force an overwrite of an app you want to keep.
+## Multiplayer
 
-This app has ad-hoc integrity signatures, without Apple Developer ID or notarization. If macOS blocks opening, follow [Apple's per-app approval instructions](https://support.apple.com/en-us/102445). A clean-machine Homebrew installation has not been tested; local validation loaded the cask with Homebrew and checked the delivered archive contents and signature. The preceding alpha.3 remains installed on the development Mac; publication does not replace it. Current package contents and cask loading were checked without a new installation.
+This is an unofficial build. Approval for the official servers has not been confirmed, and online use may put your account at risk, including a ban. Contact the BAR moderation team before playing online; offline skirmishes are recommended for now.
 
-See the main repository for [performance evidence](https://github.com/yeojuny/bar-lobby-apple-silicon/blob/master/docs/release-readiness/2026-10-15/PERFORMANCE.md), validation limits, sources and upstream credits. This personal tap is independent of upstream BAR and Homebrew's official cask collection.
+## First launch
+
+The app is ad-hoc signed without Apple Developer ID signing or notarization. If macOS shows an unidentified-developer or verification warning, and you downloaded this build from the linked repository and trust it, try opening BAR once, then go to **System Settings → Privacy & Security → Open Anyway** for BAR and confirm **Open**. See [Apple’s instructions](https://support.apple.com/en-us/102445).
+
+A restart is an optional troubleshooting step, not a guaranteed fix. Report the exact error if launching still fails. Warnings that the app will damage your computer should be investigated rather than bypassed.
+
+[1.0.1 release, sources, notices and detailed validation](https://github.com/yeojuny/bar-lobby-apple-silicon/releases/tag/v1.0.1) · [Repository and local play observations](https://github.com/yeojuny/bar-lobby-apple-silicon)
+
+The cask pins the exact DMG/SHA256 and installs only BAR.app. It contains no automatic-quit, personal-data deletion or quarantine-removal hooks. Publication does not run or install local apps. Metal3 remains default, Metal4 experimental; audio remains OpenAL/CoreAudio.
